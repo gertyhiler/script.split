@@ -1,9 +1,8 @@
 let autoreg = prompt("Авторег");
-let split = prompt("Чем разделены значения? (Дефолт :)", ":");
 function parsStr(str, split) {
-  return str.split(split);
+  return str.split(":") == str ? str.split(";") : str.split(":");
 }
-let res = parsStr(autoreg, split);
+let res = parsStr(autoreg);
 alert(res[0]);
 alert(res[1]);
-location.reload();
+location.reload()
